@@ -4,10 +4,10 @@ Sub btm1_Click()
     Sheets("ID").range("b5:g50").clear
     '�f�[�^����
     
-    'If sheets("ID").range("c2") = "" Then
-    '    sheets("DB").range("a1").autofilter
-    '    Exit Sub
-    'End If
+    If sheets("ID").range("c2") = "" Then
+        sheets("DB").range("a1").autofilter
+        Exit Sub
+    End If
     
     '�f�[�^�L���`�F�b�N
     If worksheetfunction.countif(Sheets("DB").range("a:a"), Sheets("ID").range("c2")) = 0 Then
