@@ -1,4 +1,11 @@
 Attribute VB_Name = "Module1"
+'Private Sub openform1()
+'    UserForm1.Show
+'End Sub
+
+
+
+
 Sub btm1_Click()
 
     Sheets("ID").range("b5:g50").clear
@@ -18,6 +25,7 @@ Sub btm1_Click()
     '    Exit Sub
     
         MsgBox "No Data"
+        Exit Sub
     Else
     'データ抽出
         Sheets("DB").range("a1").autofilter 1, Sheets("ID").range("c2")
