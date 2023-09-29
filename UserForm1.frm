@@ -13,15 +13,34 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 Option Explicit
 
+'確認ボタン
 Private Sub CB1_Click()
-    If txtPW.Value = "1234" Then
+    Dim pw As String
+    Me.txtID.SetFocus
+    pw = worksheetfunction.XLookup(Me.txtID, Sheets("PW").Range("a:a"), Sheets("PW").Range("b:b"))
+    
+    If pw = Me.txtPW Then
         Unload Me
     Else
-        With txtPW
-            .Value = ""
-            .SetFocus
-        End With
+        MsgBox "ID又はパスワードが違います"
+        txtPW.Value = ""
+        
     End If
+
 End Sub
+
+'キャンセルボタン
+Private Sub CB2_Click()
+    Application.DisplayAlerts = False
+    ThisWorkbook.Close False
+End Sub
+
+'×ボタン
+'Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
+'    If CloseMode = vbFormControlMenu Then
+'        Cancel = True
+'    End If
+'End Sub
