@@ -1,8 +1,5 @@
 Attribute VB_Name = "Module1"
 
-
-
-
 Sub btm1_Click()
 
     Sheets("ID").Range("a5:g50").clear
@@ -24,14 +21,11 @@ Sub btm1_Click()
     
     'データ有無チェック
         If worksheetfunction.countif(Sheets("DB").Range("a:a"), Sheets("ID").Range("c2")) = 0 Then
-    '    sheets("DB").range("a1").autofilter
-    '    Exit Sub
     
             MsgBox "No Data"
             Exit Sub
         Else
     'データ抽出
-    '    Sheets("DB").range("a1").autofilter 1, Sheets("ID").range("c2")
             With Sheets("DB").Sort
                 .SortFields.clear
                 .SortFields.Add2 Key:=Range("a1")
@@ -40,7 +34,6 @@ Sub btm1_Click()
                 .Apply
             End With
 
-    'データ抽出
             Sheets("DB").Range("a1").autofilter 1, Sheets("ID").Range("c2")
         
             Sheets("ID").Range("b5") = Sheets("DB").Cells(rows.Count, 2).End(xlUp)

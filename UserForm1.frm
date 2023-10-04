@@ -16,7 +16,7 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
-'確認ボタン
+'ログインボタン
 Private Sub CB1_Click()
     Dim pw As String
     Me.txtID.SetFocus
@@ -27,9 +27,7 @@ Private Sub CB1_Click()
     Else
         MsgBox "ID又はパスワードが違います"
         txtPW.Value = ""
-        
     End If
-
 End Sub
 
 'キャンセルボタン
@@ -39,8 +37,8 @@ Private Sub CB2_Click()
 End Sub
 
 '×ボタン
-'Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
-'    If CloseMode = vbFormControlMenu Then
-'        Cancel = True
-'    End If
-'End Sub
+Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
+    If CloseMode = vbFormControlMenu Then
+        Cancel = True
+    End If
+End Sub
