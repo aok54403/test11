@@ -1,12 +1,12 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1 
-   Caption         =   "ƒpƒXƒ[ƒh”FØ"
+   Caption         =   "ï¿½pï¿½Xï¿½ï¿½ï¿½[ï¿½hï¿½Fï¿½ï¿½"
    ClientHeight    =   1716
    ClientLeft      =   108
    ClientTop       =   456
    ClientWidth     =   3444
    OleObjectBlob   =   "UserForm1.frx":0000
-   StartUpPosition =   1  'ƒI[ƒi[ ƒtƒH[ƒ€‚Ì’†‰›
+   StartUpPosition =   1  'ï¿½Iï¿½[ï¿½iï¿½[ ï¿½tï¿½Hï¿½[ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½
 End
 Attribute VB_Name = "UserForm1"
 Attribute VB_GlobalNameSpace = False
@@ -16,7 +16,7 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
-'ƒƒOƒCƒ“ƒ{ƒ^ƒ“
+'ãƒ­ã‚°ã‚¤ãƒ³ãƒœã‚¿ãƒ³
 Private Sub CB1_Click()
     Dim pw As String
     Me.txtID.SetFocus
@@ -25,18 +25,18 @@ Private Sub CB1_Click()
     If pw = Me.txtPW Then
         Unload Me
     Else
-        MsgBox "ID–”‚ÍƒpƒXƒ[ƒh‚ªˆá‚¢‚Ü‚·"
+        MsgBox "IDåˆã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™"
         txtPW.Value = ""
     End If
 End Sub
 
-'ƒLƒƒƒ“ƒZƒ‹ƒ{ƒ^ƒ“
+'ã‚­ãƒ£ãƒ³ã‚»ãƒ«ãƒœã‚¿ãƒ³
 Private Sub CB2_Click()
     Application.DisplayAlerts = False
     ThisWorkbook.Close False
 End Sub
 
-'~ƒ{ƒ^ƒ“
+'âœ•ãƒœã‚¿ãƒ³
 Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
     If CloseMode = vbFormControlMenu Then
         Cancel = True

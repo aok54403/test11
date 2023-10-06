@@ -4,7 +4,7 @@ Sub btm1_Click()
 
     Sheets("ID").Range("a5:g50").clear
     
-    '‘SŒ•\Ž¦
+    'å…¨ä»¶è¡¨ç¤º
     If Sheets("ID").Range("c2") = "9999" Then
         With Sheets("DB").Sort
             .SortFields.clear
@@ -19,13 +19,13 @@ Sub btm1_Click()
         End With
     Else
     
-    'ƒf[ƒ^—L–³ƒ`ƒFƒbƒN
+    'ãƒ‡ãƒ¼ã‚¿æœ‰ç„¡ãƒã‚§ãƒƒã‚¯
         If worksheetfunction.countif(Sheets("DB").Range("a:a"), Sheets("ID").Range("c2")) = 0 Then
     
             MsgBox "No Data"
             Exit Sub
         Else
-    'ƒf[ƒ^’Šo
+    'ãƒ‡ãƒ¼ã‚¿æŠ½å‡º
             With Sheets("DB").Sort
                 .SortFields.clear
                 .SortFields.Add2 Key:=Range("a1")
